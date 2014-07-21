@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="video-player">
+  <%= render "shared/video" %>
+  </div>
+
+    <div class="float">
+ <h1>Listing videos</h1>
+  
+     <% @videos.each do |video| %>
+          <td><%= link_to image_tag(video.video_url(:thumb)), video_path(video) %></td>
+    <% end %>
+  </div>
+

@@ -1,0 +1,28 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<div id="single-album-show">
+  <%=image_tag  @album.cover_url(:thumb) %>
+        <strong>Name:</strong>
+            <%= @album.name %>
+               <strong>Artis:</strong>
+                 xavier
+  </div>
+
+
+<div id="jp_container_1" class="demo-container">
+        <div class="jp-type-playlist">
+       <div class="jp-playlist">
+          <ul>
+            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+            <li></li>
+          </ul>
+        </div>
+  </div>
+ <% @albums.each do |album| %>
+         <td><%= link_to image_tag(album.cover_url(:thumb)), album_path(album) %></td>
+    <% end %>
+
+<%= render 'player' %>
+
